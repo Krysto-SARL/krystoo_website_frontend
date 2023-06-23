@@ -1,4 +1,4 @@
-import ecologicIcon from '../../assets/icones/Fichier 6.svg'
+import ecologicIcon from '../../assets/icones/Fichier 9.svg'
 import recyclableIcon from '../../assets/icones/Fichier 5.svg'
 import Icon from '../../assets/icones/Fichier 4.svg'
 
