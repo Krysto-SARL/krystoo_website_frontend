@@ -1,0 +1,95 @@
+// buttons 
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: #f8f9fa;
+    ;
+    background-color: #636ab8;
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+}
+
+.btn-primary {
+    background: #636ab8;
+    color: #f8f9fa;
+    ;
+}
+
+.btn-secondary {
+    background: #3ec7a7;
+    color: #f8f9fa;
+    ;
+}
+
+.btn-dark {
+    background: #333;
+    color: #f8f9fa;
+    ;
+}
+
+.btn-light {
+    background: #f8f9fa;
+    color: #333;
+}
+.btn-block {
+    width: 100%;
+}
+.btn-danger {
+    background-color: rgb(164, 59, 59);
+}
+
+
+.bg-light{
+    background-color: #cccccc;
+}
+
+// flex-items 
+.flex-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+    div {
+        padding: 1rem;
+    }
+
+}
+
+
+// formulaires
+
+.form {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: inherit;
+  }
+  
+  .form-group label {
+    text-align: left;
+    display: block;
+    margin: 0 0 5px 3px;
+  }

@@ -12,8 +12,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  background-color: #333;
-  color: whitesmoke;
+  color: #333;
 }
 
 a {
@@ -38,4 +37,19 @@ h2,
 h3 {
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.container {
+  padding: 2rem;
+}
+
+main {
+  min-height: 100vh;
+  text-align: center;
+}
+
+.product-cards_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=index.css.map */

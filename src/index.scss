@@ -1,3 +1,19 @@
-@import "./SASS/reset";
-@import "./SASS/variables";
+@import './SASS/reset';
+@import './SASS/variables';
 
+.container {
+  padding: 2rem;
+}
+
+main {
+  min-height: 100vh;
+  text-align: center;
+}
+
+.product-cards_container {
+display: flex;
+
+justify-content: space-around;
+flex-wrap: wrap;
+
+}

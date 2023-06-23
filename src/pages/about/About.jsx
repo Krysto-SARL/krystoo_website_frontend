@@ -1,7 +1,10 @@
+import AboutHero from "../../components/about/AboutHero"
 
 function About() {
   return (
-    <div>About</div>
+    <>
+   <AboutHero/>
+    </>
   )
 }
 

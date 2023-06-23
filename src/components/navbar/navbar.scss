@@ -1,22 +1,25 @@
 @import '../../SASS/reset';
 @import '../../SASS/variables';
+@import '../../SASS/utils';
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 6vh;
   padding: 0 2rem;
-  background-color: $primary-color;
-  color: $dark-color;
+  background-color: $primary-darker;
+  color: $neutral-color;
+
 }
 
 nav {
   display: flex;
+  margin-top: 1rem;
 
   a {
     margin: 0 2rem;
-    color: $dark-color;
+    color: $neutral-color;
     text-decoration: none;
     &:hover {
       color: $secondary-color;
@@ -30,7 +33,7 @@ nav {
   background-color: transparent;
   border: none;
   outline: none;
-  color: $dark-color;
+color: $neutral-color;
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
@@ -45,6 +48,8 @@ nav {
     visibility: visible;
     opacity: 1;
   }
+  
+ 
 
   nav {
     position: fixed;
@@ -60,7 +65,13 @@ nav {
     background-color: $primary-color;
     transition: 1s;
     transform: translateY(-100vh);
-  }
+    margin-top: 0rem;
+
+    
+    z-index: 99999;
+
+
+}
 
   .responsive_nav {
     transform: none;
