@@ -10,6 +10,7 @@ import Products from './pages/products/Products'
 import Services from './pages/services/Services'
 import Contact from './pages/contact/Contact'
 import Footer from './components/footer/Footer'
+import LegalNotice from './pages/legalNotice/LegalNotice'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Nos-services" element={<Services />} />
           <Route path="/A-propos" element={<About />} />
           <Route path="/Nous-contacter" element={<Contact />} />
+          <Route path="/Mentions-légales" element={<LegalNotice />} />
         </Routes>
       </Router>
       <Footer />

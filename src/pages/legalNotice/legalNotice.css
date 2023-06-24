@@ -1,0 +1,12 @@
+.chapter {
+  text-align: left;
+  margin: 2rem;
+  width: 700px;
+}
+
+.container-notice {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}/*# sourceMappingURL=legalNotice.css.map */

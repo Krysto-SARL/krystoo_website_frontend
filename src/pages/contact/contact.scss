@@ -3,3 +3,27 @@
 @import '../../SASS/utils';
 
 
+.contact-title {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.contact-container{
+    display: flex;
+    height: 80vh;
+   
+    justify-content: space-between;
+}
+
+.image-contact-container{
+    width: 60%;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.contact-form{
+    padding: 7rem 4rem;
+}

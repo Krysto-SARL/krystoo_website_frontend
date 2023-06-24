@@ -1,13 +1,20 @@
-import './contact.css'
+import './contact.css';
+import handLids from '../../assets/hands_lids.jpeg'
 
 function Contact() {
   return (
-    <main className='container'>
-        <h1>Une question ? Un projet ? <br /> Contactez-nous !</h1>
-        <form className='form' action="">
+    <main className='contact-container'>
+        <div className="image-contact-container">
+
+        <img src={handLids} alt="" />
+        </div>
+        
+        <form className='form contact-form' action="">
+        <h1 className='contact-title'>Une question ? Un projet ? <br /> Contactez-nous !</h1>
             <div className="form-group">
                 <select name="" id="">
                     <option value="">Objet de votre message</option>
+                    <option value="">Collecte de vos déchets</option>
                     <option value="">Devenir revendeur</option>
                     <option value="">Sensibilisations</option>
                     <option value="">Team buildings</option>

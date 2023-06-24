@@ -10,4 +10,8 @@ footer {
   display: flex;
   justify-content: space-around;
   margin-bottom: 3rem;
+  text-align: left;
+}
+.footer-content ul {
+  font-size: 0.9rem;
 }/*# sourceMappingURL=footer.css.map */

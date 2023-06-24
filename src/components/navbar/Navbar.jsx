@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <header>
+      <header className='header'>
         <Link to={"/"}>
         <h3>Krysto</h3>
         </Link>
