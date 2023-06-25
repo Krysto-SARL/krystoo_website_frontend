@@ -23,6 +23,6 @@ export const store = configureStore({
     productCategory: productCategoryReducer,
     product: productReducer,
     order: orderReducer,
-    service: serviceReducer
+    service: serviceReducer,
   },
 })

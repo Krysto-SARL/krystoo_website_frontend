@@ -44,10 +44,6 @@
 .bg-light {
   background-color: #cccccc;
 }
-// .bg-primary {
-//   background-color: #9097e12b; ;
-
-// }
 
 // flex-items
 .flex-items {
@@ -56,75 +52,24 @@
   align-items: center;
   text-align: center;
   height: 100%;
-
-  div {
-    padding: 1rem;
-  }
 }
-.row {
+
+.flex-columns {
+  margin-bottom: 3rem;
+  .row {
     display: flex;
     flex-direction: row;
-    
     flex-wrap: wrap;
     width: 100%;
-  
-    
-}
-.flex-columns{
-    background-color: $primary-color;
-    margin-bottom: 3rem;
-}
-.flex-columns .column{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    text-align: left;
     height: 100%;
-    .column-1  {
-        height: 100%;
-        padding: 1rem;
-    }
-    .column-2{
   
-        height: 100%;
-        padding: 1rem;
-
-    }
+    background-color: #9097e12b;
+  }
 }
 
 
-// section header
-.section-header {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    h2 {
-        font-size: 4rem;
-        margin: 2rem 0 ;
-    }
-}
-.section-padding {
-    padding: 2rem 2rem 4rem;
-}
 
 
-// flex grid 
-.flex-grid .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 0 4px;
-   
-}
-.flex-grid .column {
- flex: 25%;
- max-width: 25%;
- padding: 0 4px;
-}
 // formulaires
 
 .form {
@@ -135,7 +80,6 @@
 .form-group {
   margin-bottom: 10px;
 }
-
 
 .form-group input,
 .form-group textarea,

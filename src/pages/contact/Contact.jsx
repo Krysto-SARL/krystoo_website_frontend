@@ -17,12 +17,25 @@ function Contact() {
                     <option value="">Collecte de vos déchets</option>
                     <option value="">Devenir revendeur</option>
                     <option value="">Sensibilisations</option>
+                    <option value="">Atelier de recyclage</option>
                     <option value="">Team buildings</option>
                     <option value="">Autres sujets</option>
                 </select>
             </div>
             <div className="form-group">
                 <label htmlFor="">Votre nom</label>
+                <input type="text" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="">Votre prénom</label>
+                <input type="text" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="">Entreprise</label>
+                <input type="text" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="">Votre fonction dans l'entreprise</label>
                 <input type="text" />
             </div>
             <div className="form-group">

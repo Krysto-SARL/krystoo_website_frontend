@@ -32,7 +32,7 @@ function Products() {
         </p>
         <section className="product-cards_container">
           {productCategories.data.map((product) => (
-            <ProductCards product={product} />
+            <ProductCards product={product} link={`/produit/${product.id}`} />
           ))}
         </section>
       </main>

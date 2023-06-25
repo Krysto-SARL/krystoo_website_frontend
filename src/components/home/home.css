@@ -96,66 +96,17 @@ img {
   text-align: center;
   height: 100%;
 }
-.flex-items div {
-  padding: 1rem;
-}
 
-.row {
+.flex-columns {
+  margin-bottom: 3rem;
+}
+.flex-columns .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-}
-
-.flex-columns {
-  background-color: #9097e1;
-  margin-bottom: 3rem;
-}
-
-.flex-columns .column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: left;
   height: 100%;
-}
-.flex-columns .column .column-1 {
-  height: 100%;
-  padding: 1rem;
-}
-.flex-columns .column .column-2 {
-  height: 100%;
-  padding: 1rem;
-}
-
-.section-header {
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.section-header h2 {
-  font-size: 4rem;
-  margin: 2rem 0;
-}
-
-.section-padding {
-  padding: 2rem 2rem 4rem;
-}
-
-.flex-grid .row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 0 4px;
-}
-
-.flex-grid .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  background-color: rgba(144, 151, 225, 0.168627451);
 }
 
 .form {
@@ -242,8 +193,4 @@ img {
   margin-bottom: 1.5rem;
   height: 100%;
   width: 100%;
-}
-
-.cases img:hover {
-  opacity: 0.9;
 }/*# sourceMappingURL=home.css.map */

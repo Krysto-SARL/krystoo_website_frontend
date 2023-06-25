@@ -1,0 +1,7 @@
+.service-cards_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=services.css.map */
