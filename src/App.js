@@ -13,6 +13,9 @@ import Contact from './pages/contact/Contact'
 import Footer from './components/footer/Footer'
 import LegalNotice from './pages/legalNotice/LegalNotice'
 import Service from './pages/service/Service'
+import Login from './pages/login/Login'
+import Private from './pages/private/Private'
+import PrrivateHome from './pages/private/privateHome/PrrivateHome'
 
 function App() {
   return (
@@ -30,6 +33,11 @@ function App() {
           <Route path="/A-propos" element={<About />} />
           <Route path="/Nous-contacter" element={<Contact />} />
           <Route path="/Mentions-légales" element={<LegalNotice />} />
+          <Route path="/espace-client" element={<Login />} />
+
+          <Route path="/private" element={<Private />}>
+            <Route path="/private/home" element={<PrrivateHome />} />
+          </Route>
         </Routes>
       </Router>
       <Footer />

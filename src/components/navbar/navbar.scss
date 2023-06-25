@@ -10,7 +10,6 @@
   padding: 0 2rem;
   background-color: $primary-darker;
   color: $neutral-color;
-
 }
 
 nav {
@@ -33,7 +32,7 @@ nav {
   background-color: transparent;
   border: none;
   outline: none;
-color: $neutral-color;
+  color: $neutral-color;
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
@@ -48,8 +47,6 @@ color: $neutral-color;
     visibility: visible;
     opacity: 1;
   }
-  
- 
 
   nav {
     position: fixed;
@@ -67,23 +64,34 @@ color: $neutral-color;
     transform: translateY(-100vh);
     margin-top: 0rem;
 
-    
     z-index: 99999;
-
-
-}
+  }
 
   .responsive_nav {
     transform: none;
   }
-  
-  .nav-close-btn{
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
- 
+
+  .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
   }
   a {
-   font-size: 1.5rem
+    font-size: 1.5rem;
   }
+}
+
+.btn-logout {
+  padding: 0 1rem;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
