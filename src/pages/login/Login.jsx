@@ -104,7 +104,11 @@ function Login() {
               <div className="form-group">
                 <button className=" btn btn-block">Ce connecter</button>
               </div>
+              
             </form>
+            <div className="form-group">
+                <button className=" btn btn-block btn-danger">Mots de passe oublier</button>
+              </div>
           </section>
         
         </main>

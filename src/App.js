@@ -16,6 +16,8 @@ import Service from './pages/service/Service'
 import Login from './pages/login/Login'
 import Private from './pages/private/Private'
 import PrrivateHome from './pages/private/privateHome/PrrivateHome'
+import Partners from './pages/partners/Partners'
+import Error404 from './pages/error404/Error404'
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
           <Route path="/A-propos" element={<About />} />
           <Route path="/Nous-contacter" element={<Contact />} />
           <Route path="/Mentions-légales" element={<LegalNotice />} />
+          <Route path="/nos-partenaires" element={<Partners />} />
           <Route path="/espace-client" element={<Login />} />
+          <Route path="*" element={<Error404 />} />
 
           <Route path="/private" element={<Private />}>
             <Route path="/private/home" element={<PrrivateHome />} />

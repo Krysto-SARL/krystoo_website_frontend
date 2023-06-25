@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { getProductCategories } from '../../features/productCategory/productCategorySlice'
 import ProductCards from '../../components/products/ProductCards'
+import Spinner from '../../components/shared/spinner/Spinner'
 
 function Products() {
   const { productCategories, isLoading } = useSelector(
@@ -16,7 +17,11 @@ function Products() {
   }, [dispatch])
 
   if (isLoading || !productCategories.data) {
-    return <h1>Chargement...</h1>
+    return (
+        <main className="main">
+          <Spinner />
+        </main>
+      )
   }
 
   return (

@@ -42,7 +42,7 @@ nav {
 }
 
 /* responsive */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1400px) {
   .nav-btn {
     visibility: visible;
     opacity: 1;
@@ -82,12 +82,13 @@ nav {
 }
 
 .btn-logout {
-  padding: 0 1rem;
-  background-color: red;
+  padding: 0.3rem 1rem;
+  background-color: $danger-color;
   color: white;
   outline: none;
   border: none;
   position: absolute;
+  border-radius: 3px;
   top: 1.3rem;
   right: 1rem;
   display: flex;

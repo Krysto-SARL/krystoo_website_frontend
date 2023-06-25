@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getServices } from '../../features/initiation/inititationSlice'
 import './services.css'
 import ProductCards from '../../components/products/ProductCards'
+import Spinner from '../../components/shared/spinner/Spinner'
 function Services() {
   const { services, isLoading } = useSelector((state) => state.service)
 
@@ -13,7 +14,11 @@ function Services() {
   }, [dispatch])
   console.log(services.data)
   if (isLoading || !services.data) {
-    return <h1>Chargement...</h1>
+    return (
+        <main className="main">
+          <Spinner />
+        </main>
+      )
   }
   return (
     <>

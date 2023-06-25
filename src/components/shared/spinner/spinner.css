@@ -135,91 +135,32 @@ img {
   margin: 0 0 5px 3px;
 }
 
-.header {
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 6vh;
-  padding: 0 2rem;
-  background-color: #636ab8;
-  color: #f8f9fa;
-}
-
-nav {
-  display: flex;
-  margin-top: 1rem;
-}
-nav a {
-  margin: 0 2rem;
-  color: #f8f9fa;
-  text-decoration: none;
-}
-nav a:hover {
-  color: #62ebca;
-}
-
-.nav-btn {
-  padding: 5px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #f8f9fa;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 1.8rem;
-}
-.nav-btn:hover {
-  color: #62ebca;
-}
-
-/* responsive */
-@media only screen and (max-width: 1400px) {
-  .nav-btn {
-    visibility: visible;
-    opacity: 1;
-  }
-  nav {
-    position: fixed;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    background-color: #9097e1;
-    transition: 1s;
-    transform: translateY(-100vh);
-    margin-top: 0rem;
-    z-index: 99999;
-  }
-  .responsive_nav {
-    transform: none;
-  }
-  .nav-close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-  }
-  a {
-    font-size: 1.5rem;
-  }
-}
-.btn-logout {
-  padding: 0.3rem 1rem;
-  background-color: #dc3545;
-  color: white;
-  outline: none;
-  border: none;
-  position: absolute;
-  border-radius: 3px;
-  top: 1.3rem;
-  right: 1rem;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-}/*# sourceMappingURL=navbar.css.map */
+  z-index: 9999999;
+}
+.loadingSpinnerContainer img {
+  margin-top: 6rem;
+  animation: spin 4s linear infinite; /* Appliquer l'animation de rotation au logo */
+  height: 200px;
+  z-index: 999999;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=spinner.css.map */

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getService } from '../../features/initiation/inititationSlice'
 import { toast } from 'react-toastify'
+import Spinner from '../../components/shared/spinner/Spinner'
 
 function Service() {
   const { service, isLoading, isError, message } = useSelector(
@@ -21,8 +22,16 @@ function Service() {
 
   console.log(service.data)
   if (isLoading || !service.data) {
-    return <h1>Chargement...</h1>
+    return (
+      <main className="main">
+        <Spinner />
+      </main>
+    )
   }
+
+
+
+
 
   if (isError) {
     return <h3>Une erreur est survenue, merci de réessayer.</h3>
@@ -32,7 +41,10 @@ function Service() {
     <main className="container">
       <h1>{service.data.name}</h1>
       <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non est fugiat ducimus, repellendus quibusdam in. Temporibus veniam accusantium quidem rerum ut porro sapiente dolore, illo ex! Saepe, dolore laborum. Exercitationem?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non est fugiat
+        ducimus, repellendus quibusdam in. Temporibus veniam accusantium quidem
+        rerum ut porro sapiente dolore, illo ex! Saepe, dolore laborum.
+        Exercitationem?
       </p>
     </main>
   )
