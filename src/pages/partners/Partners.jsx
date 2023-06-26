@@ -34,7 +34,7 @@ function Partners() {
 
         {filteredUsers.map((user) => (
             <article key={user.id} className='partner-card'>
-            <img src={`${process.env.REACT_APP_BASE_API_URL_IMAGE}${user.logo}`} alt="" />
+            <img src={`${process.env.REACT_APP_BASE_API_URL_IMAGE}${user.logo}`} alt={user.username} />
             </article>
         ))}
         </div>
