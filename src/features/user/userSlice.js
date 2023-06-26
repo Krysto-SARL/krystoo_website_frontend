@@ -105,6 +105,24 @@ export const deleteUser = createAsyncThunk(
   },
 )
 
+export const addLogo = createAsyncThunk(
+  'user/addLogo',
+  async ({ userId, logo }, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user
+      return await userService.addLogo(userId, logo, token)
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+      return thunkAPI.rejectWithValue(message)
+    }
+  },
+)
+
 export const userSlice = createSlice({
   name: 'profil',
   initialState,
@@ -183,6 +201,22 @@ export const userSlice = createSlice({
         state.isLoading = false
         state.isError = true
         state.message = action.payload
+      })
+      .addCase(addLogo.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(addLogo.fulfilled, (state, action) => {
+        state.isLoading = false
+        state.isSuccess = true
+        // Mettez à jour les données de l'utilisateur avec le logo ajouté
+        state.user.logo = action.payload.logo
+        toast.success('Logo ajouté avec succès')
+      })
+      .addCase(addLogo.rejected, (state, action) => {
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
+        toast.error("Une erreur s'est produite lors de l'ajout du logo")
       })
   },
 })

@@ -1,0 +1,43 @@
+@import '../../../SASS/reset';
+@import '../../../SASS/variables';
+@import '../../../SASS/utils';
+
+
+.profil-logo{
+    height: 10rem;
+    object-fit: contain;
+    width: 10rem;
+}
+
+.profil-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-preview{
+    height: 10rem;
+    object-fit: contain;
+    width: 10rem;
+}
+
+.add-logo-form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 20rem;
+}
+
+.profil-logo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-action-container{
+    padding-top: 3rem;
+    display: flex;
+    margin: auto;
+    max-width: 80rem;
+}

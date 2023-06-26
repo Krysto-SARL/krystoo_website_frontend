@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #f8f9fa;
+  background-color: #636ab8;
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: #636ab8;
+  color: #f8f9fa;
+}
+
+.btn-secondary {
+  background: #3ec7a7;
+  color: #f8f9fa;
+}
+
+.btn-dark {
+  background: #333;
+  color: #f8f9fa;
+}
+
+.btn-light {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-danger {
+  background-color: rgb(164, 59, 59);
+}
+
+.bg-light {
+  background-color: #cccccc;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.flex-columns {
+  margin-bottom: 3rem;
+}
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(144, 151, 225, 0.168627451);
+}
+
+.form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.profil-logo {
+  height: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 10rem;
+}
+
+.profil-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-preview {
+  height: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 10rem;
+}
+
+.add-logo-form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.profil-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-action-container {
+  padding-top: 3rem;
+  display: flex;
+  margin: auto;
+  max-width: 80rem;
+}/*# sourceMappingURL=privateMyProfil.css.map */

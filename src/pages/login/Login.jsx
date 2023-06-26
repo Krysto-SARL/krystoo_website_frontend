@@ -32,7 +32,7 @@ function Login() {
     }
     // redirect when logged in
     if (isSuccess) {
-      navigate(`/private/home`);
+      navigate(`/private/mon-profile`);
       toast.success("Vous etes connecter");
     }
 

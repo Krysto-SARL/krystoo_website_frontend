@@ -55,12 +55,23 @@ const deleteUser = async (userId, token) => {
   return response.data
 }
 
+const addLogo = async (userId, logo, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  const response = await axios.put(`${API_URL2}/${userId}/logo`, logo, config)
+  return response.data
+}
+
 const userService = {
   getProfil,
   createUser,
   getUsers,
   deleteUser,
   getUser,
+  addLogo,
 }
 
 export default userService

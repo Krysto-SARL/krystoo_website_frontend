@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import messageService from './messageService'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const initialState = {
   messages: [],
@@ -10,7 +12,6 @@ const initialState = {
   message: '',
 }
 
-// Get all messages
 export const getMessages = createAsyncThunk(
   'messages/getAll',
   async (_, thunkAPI) => {
@@ -62,14 +63,16 @@ export const closeMessage = createAsyncThunk(
   },
 )
 
-export const createNewMessage = createAsyncThunk(
-  'messages/createNew',
-  async (_, thunkAPI) => {
+export const postMessage = createAsyncThunk(
+  'messages/post',
+  async (messageData, thunkAPI) => {
     try {
-      return await messageService.createNewMessage()
+      return await messageService.postMessage(messageData)
     } catch (error) {
       const message =
-        (error.response && error.response.data && error.response.data.msg) ||
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
         error.message ||
         error.toString()
       return thunkAPI.rejectWithValue(message)
@@ -110,20 +113,8 @@ export const messageSlice = createSlice({
       .addCase(getMessage.rejected, (state, action) => {
         state.isLoading = false
         state.isError = true
-        state.message = action.payload
-        state.messageData = {}
-      })
-      .addCase(createNewMessage.pending, (state) => {
-        state.isLoading = true
-      })
-      .addCase(createNewMessage.fulfilled, (state) => {
-        state.isLoading = false
-        state.isSuccess = true
-      })
-      .addCase(createNewMessage.rejected, (state, action) => {
-        state.isLoading = false
-        state.isError = true
         state.messageData = action.payload
+        state.messageData = {}
       })
       .addCase(closeMessage.fulfilled, (state, action) => {
         state.isLoading = false
@@ -134,6 +125,22 @@ export const messageSlice = createSlice({
               : messageData,
           )
         }
+      })
+      .addCase(postMessage.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(postMessage.fulfilled, (state, action) => {
+        state.isLoading = false
+        state.isSuccess = true
+        toast.success('Message envoyé avec succès') // Affiche un toast de succès
+        // Optionally update state.messages with the newly posted message
+        // depending on your application's logic.
+      })
+      .addCase(postMessage.rejected, (state, action) => {
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
+        toast.error(`Une erreur c'est produite merci de réessayer`) // Affiche un toast d'erreur
       })
   },
 })

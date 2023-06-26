@@ -1,0 +1,58 @@
+@import "../../../SASS/reset";
+@import "../../../SASS/variables";
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(21, 37, 37, 0.681);
+}
+
+
+
+.modal {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $primary-color;
+    padding: 1.4rem 2.8rem;
+    border-radius: 5px;
+    max-width: 60rem;
+    min-width: 30rem;
+}
+
+.btn-close {
+    background-color: transparent;
+
+    background: none;
+    border: none;
+    color: $danger-color;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    &:hover{
+        font-weight: bolder;
+    }
+
+
+
+}
+
+.modal-content{
+    padding: 1rem;
+}
+
+/* Modal open class */
+.modal-open {
+    overflow: hidden;
+  }

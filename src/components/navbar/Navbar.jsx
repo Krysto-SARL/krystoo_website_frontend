@@ -41,7 +41,7 @@ function Navbar() {
 
           {user ? (
             <>
-              <Link to={'/private/home'}>Mon espace</Link>
+              <Link to={'/private/mon-profile'}>Mon espace</Link>
 
               <button className="btn-logout" onClick={onLogout}>
                 {' '}

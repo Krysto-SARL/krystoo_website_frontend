@@ -15,17 +15,16 @@ const closeMessage = async (messageId) => {
   })
   return response.data
 }
-
-const createNewMessage = async () => {
-  const response = await axios.post(`${API_URL}/messages`)
+const postMessage = async (messageData) => {
+  const response = await axios.post(API_URL, messageData)
   return response.data
 }
 
 const messageService = {
   getMessages,
   getMessage,
+  postMessage,
   closeMessage,
-  createNewMessage,
 }
 
 export default messageService
