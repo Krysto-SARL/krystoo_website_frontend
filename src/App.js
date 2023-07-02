@@ -18,6 +18,8 @@ import Private from './pages/private/Private'
 import Partners from './pages/partners/Partners'
 import Error404 from './pages/error404/Error404'
 import PrivateMyProfil from './pages/private/privateMyProfil/PrivateMyProfil'
+import RecyclableProducts from './pages/recyclableProducts/RecyclableProducts'
+import RecyclableProduct from './pages/recyclableProduct/RecyclableProduct'
 
 function App() {
   return (
@@ -36,6 +38,11 @@ function App() {
           <Route path="/Nous-contacter" element={<Contact />} />
           <Route path="/Mentions-légales" element={<LegalNotice />} />
           <Route path="/nos-partenaires" element={<Partners />} />
+          <Route path="/recyclage-et-santé" element={<RecyclableProducts />} />
+          <Route
+            path="/produit-recyclable/:id"
+            element={<RecyclableProduct />}
+          />
           <Route path="/espace-client" element={<Login />} />
           <Route path="*" element={<Error404 />} />
 

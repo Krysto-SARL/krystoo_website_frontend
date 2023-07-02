@@ -12,8 +12,9 @@ const initialState = {
   message: '',
 }
 
-// Login user
+// login user
 export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
+  console.log(user)
   try {
     return await authService.login(user)
   } catch (error) {
@@ -26,34 +27,10 @@ export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
 })
 
 // Logout
+
 export const logout = createAsyncThunk('auth/logout', async () => {
   await authService.logout()
 })
-
-// Update password
-export const updatePassword = createAsyncThunk(
-  'auth/updatePassword',
-  async (passwordData, thunkAPI) => {
-    try {
-      // Retrieve the token from local storage
-      const token = thunkAPI.getState().auth.user
-
-      // // Pass the token along with the password data
-      // const data = {
-      //   ...passwordData,
-      //   token: token,
-      // }
-
-      return await authService.updatePassword(passwordData, token)
-    } catch (error) {
-      const message =
-        (error.response && error.response.data && error.response.data.msg) ||
-        error.message ||
-        error.toString()
-      return thunkAPI.rejectWithValue(message)
-    }
-  },
-)
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -68,6 +45,7 @@ export const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+
       .addCase(login.pending, (state) => {
         state.isLoading = true
       })
@@ -82,24 +60,9 @@ export const authSlice = createSlice({
         state.message = action.payload
         state.user = null
       })
+
       .addCase(logout.fulfilled, (state, action) => {
         state.user = null
-      })
-      .addCase(updatePassword.pending, (state) => {
-        state.isLoading = true
-        state.isSuccess = false
-        state.isError = false
-        state.message = ''
-      })
-      .addCase(updatePassword.fulfilled, (state) => {
-        state.isLoading = false
-        state.isSuccess = true
-        state.message = 'Password updated successfully.'
-      })
-      .addCase(updatePassword.rejected, (state, action) => {
-        state.isLoading = false
-        state.isError = true
-        state.message = action.payload
       })
   },
 })

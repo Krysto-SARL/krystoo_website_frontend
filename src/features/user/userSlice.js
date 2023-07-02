@@ -208,9 +208,12 @@ export const userSlice = createSlice({
       .addCase(addLogo.fulfilled, (state, action) => {
         state.isLoading = false
         state.isSuccess = true
-        // Mettez à jour les données de l'utilisateur avec le logo ajouté
         state.user.logo = action.payload.logo
         toast.success('Logo ajouté avec succès')
+
+        setTimeout(() => {
+          window.location.reload()
+        }, 3000)
       })
       .addCase(addLogo.rejected, (state, action) => {
         state.isLoading = false

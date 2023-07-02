@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProfil, addLogo } from '../../../features/user/userSlice'
-import { updatePassword } from '../../../features/auth/authSlice'
+// import { updatePassword } from '../../../features/auth/authSlice'
 import Spinner from '../../../components/shared/spinner/Spinner'
 import './privateMyProfil.css'
 import { toast } from 'react-toastify'
@@ -51,7 +51,7 @@ function PrivateMyProfil() {
     formData.append('logo', logoFile)
     dispatch(addLogo({ userId: profil.data.id, logo: formData }))
       .then(() => {
-        toast.success('Logo ajouté avec succès')
+     
         setIsNewProductModalOpen(false)
       })
       .catch((error) => {
@@ -61,14 +61,14 @@ function PrivateMyProfil() {
 
   const handlePasswordSubmit = (e) => {
     e.preventDefault()
-    dispatch(updatePassword({ currentPassword, newPassword }))
-      .then(() => {
-        toast.success('Mot de passe mis à jour avec succès')
-        setIsNewPasswordModalOpen(false)
-      })
-      .catch((error) => {
-        toast.error(`Une erreur s'est produite, merci de réessayer`)
-      })
+    // dispatch(updatePassword({ currentPassword, newPassword }))
+    //   .then(() => {
+    //     toast.success('Mot de passe mis à jour avec succès')
+    //     setIsNewPasswordModalOpen(false)
+    //   })
+    //   .catch((error) => {
+    //     toast.error(`Une erreur s'est produite, merci de réessayer`)
+    //   })
   }
 
   if (isLoading || !profil.data) {

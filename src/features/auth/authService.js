@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const API_URL = process.env.REACT_APP_BASE_API_URL + '/auth'
 
-// Login user
+// login user
 const login = async (userData) => {
   const response = await axios.post(API_URL + '/login', userData)
 
@@ -17,26 +17,9 @@ const logout = () => {
   localStorage.removeItem('userToken')
 }
 
-// Update password
-const updatePassword = async (passwordData, token) => {
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  }
-  const response = await axios.put(
-    API_URL + '/updatepassword',
-    passwordData,
-    config,
-  )
-
-  return response.data
-}
-
 const authService = {
-  login,
   logout,
-  updatePassword,
+  login,
 }
 
 export default authService

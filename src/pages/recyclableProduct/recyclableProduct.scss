@@ -1,0 +1,34 @@
+.recyclableProduct-header{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.recyclableProduct_imageContainer{
+    width: 10rem;
+    height: 10rem;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+
+.score-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 2px black;
+    border-radius: 10px;
+    p{
+        text-align: center;
+        font-size: 0.9rem;
+        margin-left: 2rem;
+    }
+}
