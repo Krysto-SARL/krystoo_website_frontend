@@ -1,0 +1,20 @@
+.how-to-recycle-container {
+  display: flex;
+  background-color: #acabab;
+}
+.how-to-recycle-container .image-container {
+  width: 80%;
+  height: 40rem;
+}
+.how-to-recycle-container .image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.how-to-recycle-container .txt {
+  padding: 10rem 2rem;
+}
+.how-to-recycle-container .txt p {
+  margin-bottom: 2rem;
+}/*# sourceMappingURL=home.css.map */

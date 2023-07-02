@@ -41,10 +41,7 @@ function Service() {
     <main className="container">
       <h1>{service.data.name}</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non est fugiat
-        ducimus, repellendus quibusdam in. Temporibus veniam accusantium quidem
-        rerum ut porro sapiente dolore, illo ex! Saepe, dolore laborum.
-        Exercitationem?
+       {service.data.detail}
       </p>
     </main>
   )

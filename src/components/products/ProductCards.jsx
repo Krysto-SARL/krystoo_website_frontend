@@ -26,9 +26,7 @@ function ProductCards({ product, link }) {
         <div className="info">
           <h3>{product.name}</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            dicta saepe tempore quos autem laboriosam quis nemo asperiores
-            facilis quod?
+           {product.detail}
           </p>
         </div>
       </article>

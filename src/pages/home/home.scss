@@ -1,0 +1,20 @@
+.how-to-recycle-container{
+    display: flex;
+    background-color: #acabab;
+    .image-container{
+        width: 80%;
+        height: 40rem;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+    }
+    .txt {
+        padding: 10rem 2rem ;
+        p{
+            margin-bottom: 2rem;
+
+        }
+    }
+}
